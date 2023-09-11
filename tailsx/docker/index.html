@@ -46,8 +46,8 @@
             <div class="section-content section-content-2">
                 <h3>Running TailsX with Docker</h3>
                 <h2>Table of contents</h2>
-                <ul class="table-of-contents">
-                    <li><a href="#modify-dockerfile">Modify the Dockerfile</a><ul class="table-of-contents">
+                <ul class="doc-list">
+                    <li><a href="#modify-dockerfile">Modify the Dockerfile</a><ul class="doc-list">
                         <li><a href="#add-your-domain">Add your domain</a></li>
                         <li><a href="#configure-gunicorn">Configuring Gunicorn (Optional)</a></li>
                     </ul></li>
@@ -56,28 +56,24 @@
                 </ul>
                 <br>
                 <p class="p-reset">TailsX can be ran under a Docker container easily.</p>
-                <br>
-                <h3 id="modify-dockerfile">Modify the Dockerfile (aptly named <code class="monospaced">Dockerfile</code>)</h3>
-                <h2 id="add-your-domain">Add your domain</h2>
+                <h3 id="modify-dockerfile" class="doc-header">Modify the Dockerfile (aptly named <code class="monospaced">Dockerfile</code>)</h3>
+                <h2 id="add-your-domain" class="doc-header">Add your domain</h2>
                 <p class="p-reset">There should be a line in the Dockerfile that looks like this;</p>
                 <pre><code class="language-docker"># ENV DOMAIN=https://www.yourdomain.com</code></pre>
                 <p class="p-reset">Uncomment this line by removing the <code class="monospaced">#</code> and change the domain to your own domain.</p>
-                <br>
-                <h2 id="configure-gunicorn">Configuring Gunicorn (Optional)</h2>
+                <h2 id="configure-gunicorn" class="doc-header">Configuring Gunicorn (Optional)</h2>
                 <p class="p-reset">The default configuration of Gunicorn works, but you can optionally configure it to your liking.</p>
                 <br>
                 <p class="p-reset">The command that will be called can be found in <code class="monospaced">CMD</code> (see the very end of the file). The arguments are seperated into different strings in a list.</p>
                 <br>
                 <p class="p-reset">See<a href="https://docs.gunicorn.org/en/latest/run.html" target="_blank">the gunicorn docs</a>on running gunicorn and<a href="https://docs.docker.com/engine/reference/builder/#cmd" target="_blank">the Docker docs</a>on how the <code class="monospaced">CMD</code> instruction works.</p>
-                <br>
-                <h3 id="build-and-run">Build & run TailsX</h3>
+                <h3 id="build-and-run" class="doc-header">Build & run TailsX</h3>
                 <p class="p-reset">Build an image and tag it with <code class="monospaced">tailsx:latest</code>.</p>
                 <pre><code class="language-bash">docker build -t tailsx:latest .</code></pre>
                 <p class="p-reset">Start the image with <code class="monospaced">docker-compose</code>.</p>
                 <pre><code class="language-bash">docker-compose up</code></pre>
                 <p class="p-reset"><i>NOTE: If you experience any permissions errors, you can try running both commands with <code class="monospaced">sudo</code>.</i></p>
-                <br>
-                <h3 id="test-your-server">Test your server</h3>
+                <h3 id="test-your-server" class="doc-header">Test your server</h3>
                 <p class="p-reset">See <a href="/tailsx/#test-your-server">here</a> on testing your server.</p>
             </div>
         </div>

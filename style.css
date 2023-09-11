@@ -45,8 +45,18 @@ body {
     border-bottom: 1px solid #282828;
 }
 
-.table-of-contents {
+.doc-list {
     list-style: none;
+}
+
+.doc-header {
+    margin-top: 35px !important;
+}
+
+h4.doc-header {
+    font-size: 140%;
+    font-style: italic;
+    color: #c7c7c7
 }
 
 .monospaced {
